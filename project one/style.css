@@ -1,0 +1,694 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 100vh;
+    background: url(imges.jpg) center center/cover no-repeat;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.navbar img {
+    width: 200px;
+    margin-left: 50px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul a {
+    padding: 15px 20px;
+    color: white;
+    font-weight: 500;
+}
+
+.navbar ul li a:hover {
+    color: rgb(138, 169, 206);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+    text-align: center;
+    color: white;
+}
+
+.container h1 {
+    font-size: 44px;
+}
+
+.container p {
+    margin: 20px 0 40px;
+    color: white;
+}
+
+.span {
+    color: rgb(138, 169, 206);
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 0, 0, 0.6);
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 4px solid rgb(77, 58, 6);
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: rgb(26, 25, 39);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar img {
+        width: 150px;
+        margin-left: 0;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .navbar ul li {
+        width: 100%;
+    }
+
+    .navbar ul a {
+        padding: 10px 20px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .container h1 {
+        font-size: 32px;
+    }
+
+    .container p {
+        font-size: 16px;
+        margin: 20px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px 20px;
+    }
+}
+
+/* Tablet Responsiveness */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 20px 50px;
+    }
+
+    .container h1 {
+        font-size: 36px;
+    }
+
+    .container p {
+        font-size: 18px;
+        margin: 20px 0 40px;
+    }
+
+    .btn {
+        padding: 14px 28px;
+    }
+}
+
+/* Global Styles */
+.content {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* About Section */
+#About {
+    background-color: #1f242d;
+    background-color: #323946;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Title Styles */
+#About .title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+#About h2 {
+    font-size: 40px;
+    color: rgb(200, 204, 220);
+    margin-bottom: 20px;
+}
+
+#About .title p {
+    font-size: 14px;
+    color: rgb(158, 128, 88);
+    font-weight: 600;
+}
+
+/* About Content Layout */
+#About .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Image Styling */
+#About .about-content img {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Text Styling */
+#About .about-content p {
+    margin-right: 7rem;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-top: 90px;
+}
+
+/* Button Styles */
+.first {
+    background: #383848;
+    border-radius: 10px;
+    border: #383848 1px solid;
+    margin-top: 100px;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 4px solid rgb(157, 164, 189);
+    border-radius: 15px;
+    color: #13b5a2;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.first:hover {
+    color: azure;
+    background-color: rgb(107, 104, 113);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    #About .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #About .about-content img {
+        width: 80%;
+        margin-top: 20px;
+    }
+    
+    #About .about-content p {
+        margin-right: 0;
+        margin-top: 20px;
+    }
+    
+    .first {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    #About h2 {
+        font-size: 32px;
+    }
+
+    #About .title p {
+        font-size: 12px;
+    }
+
+    #About .about-content img {
+        width: 100%;
+    }
+
+    #About .about-content p {
+        margin-right: 0;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    .first {
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    #About h2 {
+        font-size: 28px;
+    }
+
+    #About .about-content img {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #About .about-content p {
+        margin-right: 0;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .first {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+#Services {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(61, 58, 67);
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 0 10px; /* Add some padding for smaller screens */
+}
+
+#Services h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: rgb(200, 204, 220);
+}
+
+#Services p {
+    color: white;
+    font-weight: 500;
+}
+
+#Services .offers-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 30px; /* Add gap between items for better spacing */
+}
+
+#Services .offers-items div {
+    max-width: 300px; /* Limit width of items */
+    flex: 1 1 300px; /* Ensure each item takes up equal space but doesn't stretch too wide */
+    padding: 10px;
+}
+
+#Services .offers-items img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+#Services h3 {
+    font-size: 25px;
+    color: rgb(234, 226, 226);
+    margin: 15px 0;
+}
+
+#Services p {
+    font-size: 14px;
+    padding: 0 20px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    #Services h2 {
+        font-size: 30px; /* Smaller title font size */
+    }
+
+    #Services h3 {
+        font-size: 20px; /* Smaller heading font size */
+    }
+
+    #Services p {
+        font-size: 12px; /* Smaller paragraph text */
+    }
+
+    #Services.offers-items {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center the items */
+    }
+
+    #Services .offers-items img {
+        width: 150px; /* Reduce image size on smaller screens */
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #Services h2 {
+        font-size: 24px; /* Even smaller title font size */
+    }
+
+    #Services h3 {
+        font-size: 18px; /* Even smaller heading font size */
+    }
+
+    #Services p {
+        font-size: 12px; /* Adjust paragraph font size */
+    }
+
+    #Services .offers-items {
+        padding: 0 5px; /* Reduce padding for very small screens */
+    }
+
+    #Services .offers-items img {
+        width: 120px; /* Further reduce image size */
+        height: 120px;
+    }
+}
+#product{
+    background-color: #138e8a;
+}
+  /* General container styling */
+  #product h2{
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: capitalize;
+  }  
+  
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 16px;
+    height:99%;
+  }
+  
+  .project {
+    position: relative;
+    background-color: #8eb0dd;
+    padding: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 1s;
+    height: 100%;
+  }
+  
+  .project img {
+    width: 100%;
+    border-radius: 6px;
+    transition: transform 1s;
+  }
+  
+  .layer {
+    width: 100%;
+    height: 0%;
+    border-radius: 12px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #2d7ef7);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 15px;
+    transition: height 1s;
+  }
+  
+   .layer h3 {
+    font-weight: 600;
+    margin-bottom: 0px;
+    margin-bottom: 10px;
+    margin-top: 38px;
+    color: rgb(10, 10, 10);
+  } 
+  .layer p {
+    font-weight: 350;
+  }
+  
+  .layer a {
+    margin-top: 20px;
+    color: #262626;
+    text-decoration: underline;
+    font-size: 18px;
+    line-height: 60px;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+  }
+  
+  .project:hover img {
+    transform: scale(1.1);
+  }
+  
+  .project:hover .layer {
+    height: 100%;
+  }
+  #product.btn {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+  
+  #product .btn:hover {
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  } 
+
+/* For smaller screen sizes, adjust the layout */
+@media (max-width: 1200px) {
+    .projects {
+        justify-content: space-around;
+    }
+
+    .project {
+        max-width: 48%;  /* Adjust width for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    /* For mobile screens, stack projects vertically */
+    .projects {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .project {
+        max-width: 80%;  /* Make each project take up more space on smaller screens */
+    }
+
+    h2 {
+        font-size: 30px;  /* Adjust header font size */
+    }
+
+    .layer h3 {
+        font-size: 20px;
+    }
+
+    .layer p {
+        font-size: 14px;
+    }
+
+    .layer a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* For very small screens (e.g., smartphones), adjust layout further */
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        max-width: 90%;  /* Projects take up most of the screen width */
+    }
+
+    h2 {
+        font-size: 26px;  /* Smaller header for small screens */
+    }
+
+    .layer h3 {
+        font-size: 18px;
+    }
+
+    .layer p {
+        font-size: 13px;
+    }
+
+    .layer a {
+        font-size: 14px;
+    }
+}
+
+/* Contact container styles for responsive layout */
+#Contact {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #1d868d;
+    border: 1px solid #3286b4;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(54, 169, 185, 0.74);
+}
+
+
+/* Header styling */
+/* General Styling */
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #071b23;
+}
+
+/* Form Styling */
+.contact-form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 15px; /* Added padding to avoid contact with screen edges on small devices */
+}
+
+label {
+    font-weight: bold;
+    color: #030d2d;
+
+}
+
+input, textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #138e8a;
+    border-radius: 5px;
+    width: 100%; /* Changed from 160vh to 100% for responsiveness */
+    box-sizing: border-box; /* Ensures padding doesn't affect width calculation */
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+
+button {
+    background-color: #092834;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Button takes full width */
+    max-width: 200px; /* Maximum width for larger screens */
+    margin: 0 auto; /* Center the button */
+}
+
+button:hover {
+    background-color: #42678f;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    #Contact{
+        padding: 20px;
+    }
+  
+    input, textarea {
+        font-size: 14px; /* Smaller font size on smaller screens */
+    }
+  
+    button {
+        font-size: 14px; /* Adjust button font size */
+        padding: 12px 20px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 0 10px; /* Added padding for mobile view */
+    }
+
+    input, textarea {
+        font-size: 14px; /* Slightly smaller font for mobile */
+    }
+
+    button {
+        padding: 12px 20px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Adjust font size */
+    }
+  
+    h1 {
+        font-size: 24px; /* Slightly smaller heading for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px; /* Smaller font size for extra small screens */
+    }
+  
+    .contact-form {
+        padding: 0 5px; /* Remove excess padding on very small screens */
+    }
+
+    input, textarea {
+        font-size: 12px; /* Smaller text for very small screens */
+    }
+
+    button {
+        padding: 10px 15px; /* Smaller button size */
+        font-size: 12px; /* Smaller button text */
+    }
+}
